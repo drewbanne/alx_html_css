@@ -1,0 +1,260 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Set font family to Source Sans Pro as per Figma, with fallbacks */
+  font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  /* Removed padding from body; padding will be applied to individual sections/containers */
+}
+
+/* Header section: Contains navigation and the main hero/banner content */
+header {
+  position: relative; /* Essential for absolutely positioning children elements */
+  width: 100%; /* Full width */
+  height: 1093px; /* Exact height for the banner area (based on object.png dimensions) */
+  background-image: url('./images/object.png'); /* The main banner background image */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat;
+  /* Removed flex-direction: column; and align-items: center; from header directly
+     as header-content-wrapper will handle the inner content positioning */
+  overflow: hidden; /* Hide any overflow if content extends beyond fixed height */
+}
+
+/* Main Navigation Bar (positioned precisely within the header) */
+.main-nav {
+    position: absolute; /* Position relative to the header */
+    top: 35.02px; /* Y-position from design */
+    left: 50%; /* Start centering from here */
+    transform: translateX(-50%); /* Adjust for true horizontal center */
+    width: 1103.41px; /* W from design */
+    height: 29.46px; /* H from design */
+    display: flex;
+    justify-content: space-between; /* Pushes logo to left, links to right */
+    align-items: center; /* Vertically center items in nav */
+    z-index: 10; /* Ensure nav is above other absolutely positioned elements if any */
+}
+
+/* Styles for the Smileschool logo image within the navigation */
+.nav-logo {
+    height: 29.46px; /* Match height of nav bar as per design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the navigation links list */
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 53px; /* Spacing between links as per design */
+}
+
+/* Styles for individual navigation links */
+.nav-links li a {
+    color: #fff; /* White text */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Text size 16px */
+    white-space: nowrap; /* Prevent links from wrapping to new lines */
+}
+
+.nav-links li a:hover {
+    opacity: 0.8; /* Subtle hover effect */
+}
+
+/* New: Wrapper for all main content within the header (Get schooled, pros section etc.) */
+/* This wrapper ensures all content can be absolutely positioned relative to the header's top-left corner */
+.header-content-wrapper {
+    position: absolute; /* Position relative to header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* This div itself does not need flex properties here as its children are absolute */
+}
+
+/* "Get schooled" text */
+.hero-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 120px;
+  color: #fff; /* Get schooled is in white */
+  font-weight: 700;
+  line-height: 1; /* Adjust line height for precise alignment */
+  text-align: center; /* Centered within its own box */
+  
+  /* Adjusted positioning relative to header-content-wrapper */
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for true center */
+  top: 220px; /* Y: 220 */
+  width: 684px; /* W: 684 */
+  height: 151px; /* H: 151 */
+}
+
+/* Container for SMILES, GRIN, LAUGH keywords */
+.hero-keywords {
+    position: absolute; /* Absolute positioning relative to header-content-wrapper */
+    top: 361px; /* Y: 361 for keywords */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for true center */
+    display: flex; /* Use flexbox to put keywords on the same line */
+    justify-content: center; /* Center keywords within their container */
+    gap: 20px; /* Small gap between keywords for readability */
+    height: 20px; /* H: 20 for keywords */
+}
+
+.keyword-item {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px; /* Text size 16 */
+  font-weight: bold; /* Bold Source Sans Pro */
+  color: #fff; /* White text */
+  white-space: nowrap; /* Prevent wrapping */
+  line-height: 20px; /* Align text vertically */
+}
+
+/* Register Button */
+.register-button {
+  display: inline-block;
+  background-color: #C271FF; /* Button color C271FF */
+  color: #fff; /* Pure white text */
+  text-decoration: none;
+  padding: 0; /* Remove default padding for precise height control */
+  border-radius: 30px;
+  font-size: 14px; /* Text size 14 */
+  font-weight: 600; /* Semibold */
+  transition: background-color 0.3s ease;
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Indicate clickable */
+  line-height: 44px; /* Set line-height to button height for vertical centering */
+  text-align: center; /* Center text horizontally */
+
+  position: absolute; /* Absolute positioning relative to header-content-wrapper */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for true center */
+  top: 419px; /* Y: 419 */
+  width: 162px; /* W: 162 */
+  height: 44px; /* H: 44 */
+}
+
+.register-button:hover {
+  background-color: #a050d0; /* A slightly darker shade for hover */
+}
+
+/* Learn from the pros section (now positioned within the header) */
+.pros-heading {
+  font-size: 32px; /* Font size 32 */
+  color: #fff; /* The remaining "from the pros" is white */
+  font-weight: 300; /* And it's light */
+  text-align: center; /* Centered */
+  background-color: transparent; /* Explicitly remove any background */
+
+  position: absolute; /* Absolute positioning relative to header-content-wrapper */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for true center */
+  top: 631px; /* Y: 631 (419px button top + 44px button height + 168px distance) */
+  width: 261px; /* W: 261 */
+  height: 40px; /* H: 40 */
+  line-height: 40px; /* Vertically align text within its bounding box */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* "Learn" part of the heading */
+.pros-learn {
+  color: #C271FF; /* Purple color code */
+  font-weight: bold; /* Boldened */
+}
+
+/* Profile cards container (now positioned within the header) */
+.profiles {
+  display: flex;
+  flex-wrap: nowrap; /* IMPORTANT: Ensure profiles are on the same line, prevent wrapping */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 136px; /* Adjusted gap: (1008 - 4*150) / 3 = 136px to fit within 1008px width */
+  max-width: 1008px; /* Container width 1008px */
+  height: 237px; /* Container height 237px */
+  align-items: flex-start; /* Align cards to the top of the container */
+  padding: 0; /* Remove padding if not needed, as position/dimensions are absolute */
+
+  position: absolute; /* Absolute positioning relative to header-content-wrapper */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for true center */
+  top: 758px; /* Y: 758 (631px pros-heading top + 40px pros-heading height + 87px distance) */
+  overflow: hidden; /* Hide any overflow if content extends beyond fixed height */
+}
+
+.profile-card {
+  width: 150px; /* Profile card width to match image */
+  text-align: center;
+  background-color: transparent; /* No background for the card itself based on description */
+  box-shadow: none; /* No shadow */
+  border-radius: 0; /* No explicit border radius on the card div */
+  display: flex; /* Use flexbox to stack image and text */
+  flex-direction: column;
+  align-items: center; /* Center content within card */
+  flex-shrink: 0; /* Prevent individual cards from shrinking */
+}
+
+.profile-card img {
+  width: 150px; /* W: 150 */
+  height: 150px; /* H: 150 */
+  border-radius: 50%; /* Circular form */
+  object-fit: cover; /* Ensure image covers the circular area */
+  margin-bottom: 0.5rem; /* Small space below image */
+}
+
+.profile-card h3 {
+  font-size: 18px; /* Name: 18 */
+  color: #fff; /* Profile names are white */
+  margin-bottom: 0.2rem;
+  font-weight: normal; /* Ensure not bold unless specified */
+}
+
+.profile-card p {
+  font-size: 0.95rem; /* Existing size, adjust if needed */
+  color: #fff; /* Italicized text below is white */
+  margin: 0;
+  font-style: italic; /* Light italics for title */
+  font-weight: 300; /* Light font weight */
+}
+
+/* Specific styling for profile title and year for line break */
+.profile-card .profile-title {
+    margin-bottom: 0; /* Remove margin between title and year */
+}
+.profile-card .profile-year {
+    margin-top: 0.2rem; /* Small space above year */
+}
+
+
+/* Global section padding for consistency if body padding removed */
+/* Main section padding should be applied to its children sections */
+main section {
+    padding: 2rem;
+}
+
+/* Footer styling */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #000; /* Assuming a dark footer for white text visibility */
+    color: #fff;
+}
+
+footer img {
+    height: 50px; /* Example size for footer logo */
+    margin-bottom: 1rem;
+}
+
+footer div i {
+    color: #fff; /* White social media icons */
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
