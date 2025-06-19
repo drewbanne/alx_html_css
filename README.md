@@ -1,4 +1,4 @@
-🎧 Dynamic Headphones Website
+##🎧 Dynamic Headphones Website
 This project is a capstone for the ALX Frontend Web Development curriculum, focusing on HTML and CSS.
 
 📄 Project Goal
