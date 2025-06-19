@@ -1,72 +1,57 @@
-Headphones Website - ALX HTML/CSS Project
+🎧 Dynamic Headphones Website
+This project is a capstone for the ALX Frontend Web Development curriculum, focusing on HTML and CSS.
 
-Project Overview
-This project implements a fully functional and responsive marketing website for "Headphones," based on a provided design blueprint. The primary goal is to demonstrate a solid understanding and application of fundamental HTML, CSS, and responsive design principles, ensuring the web page looks identical to the designer file across various screen sizes.
+📄 Project Goal
+Develop a fully responsive landing page for a conceptual "Headphones" product. The design adheres strictly to a provided Figma blueprint, showcasing proficiency in advanced HTML, CSS, and vanilla JavaScript for interactive elements.
 
-This project was built from scratch without the use of any external CSS frameworks or JavaScript, focusing purely on core web development skills.
+✨ Features
+Responsive layout (adapts seamlessly to various screen sizes)
 
-Live Demo
-(Once deployed, you can add a link to your live GitHub Pages or other hosting here.)
+🍔 JavaScript-driven Hamburger Menu for mobile (activates below 480px)
 
-Design Reference
-The visual design and specifications for this website are derived from the Figma design file. Developers should refer to this for exact measurements, typography, colors, and layout.
+🎨 Advanced CSS styling for a polished design
 
-Features Implemented
-Responsive Layout: Adapts seamlessly to different screen sizes, with a dedicated mobile version for screens 480px wide or less.
+🔺 Pure CSS-drawn Pentagon shapes in "Our results" section
 
-Hero Section: Prominent header with a background image, clear navigation, main title, sub-title, and a call-to-action button, followed by a descriptive paragraph.
+⚙️ Smooth hover animations (scaling, opacity) on "What we do" and "Our results" items
 
-"What we do" Section: Showcases key features/services with icons, titles, and descriptions arranged in a responsive grid.
+Contact form with centered call-to-action
 
-"Our results" Section: Highlights achievements with percentage-based visuals and accompanying text, presented on a dark background.
+Custom-styled footer with social media icons
 
-Contact Us Section: A basic form for user inquiries.
+Semantic HTML structure for improved accessibility
 
-F.A.Q Section: Displays frequently asked questions and answers in a two-column responsive layout.
+🛠️ Technologies Used
+HTML5
 
-Interactive Elements: Implements specified hover and active states for navigation links and buttons.
+CSS3
 
-Semantic HTML5: Uses appropriate HTML tags to ensure a well-structured and accessible document.
+JavaScript (Vanilla)
 
-Custom CSS: All styling is achieved using vanilla CSS, without relying on external frameworks.
+Font Awesome
 
-Requirements Adherence
-No External CSS Frameworks: All styling is custom-written.
+Figma (Design Reference)
 
-No JavaScript: Functionality is purely HTML/CSS-based (e.g., mobile menu toggling uses pure CSS tricks if implemented).
+📂 Files
+index.html – Main HTML structure of the landing page
 
-Figma Usage: Design accuracy is paramount, referencing the provided Figma PDF for dimensions, colors, and fonts.
+0-styles.css – All custom CSS styling and responsive rules
 
-Font Handling: Uses Source Sans Pro and Spin Cycle OT (or suitable fallbacks/imports).
+script.js – JavaScript for interactive elements (e.g., hamburger menu)
 
-Interactions:
+images/ – Directory containing all necessary image assets
 
-Links hover/active: Color changes to #FF6565.
-
-Button hover/active: Opacity changes to 0.9.
-
-Max Content Width: Main content is capped at 1000px and centered on the page.
-
-Mobile Responsiveness: The layout transitions to a mobile-optimized version when the screen width is 480px or less.
-
-Technologies Used
-HTML5: For content structure.
-
-CSS3: For styling and layout (Flexbox, Grid, Media Queries).
-
-Font Awesome: For scalable vector icons.
-
-Setup & Local Development
-To set up and view this project locally:
-
+🚀 Getting Started
 Clone the repository:
 
 git clone https://github.com/drewbanne/alx_html_css.git
+cd alx_html_css
 
-Navigate to the project directory:
+Open index.html in your web browser.
 
-Project Images:
-The design relies on specific images.
+✅ Author
+Andrews Inaam Banne – ALX SE Program
 
-Author
-Andrews Inaam Banne
+GitHub Profile
+
+Behance Profile
