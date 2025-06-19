@@ -508,14 +508,15 @@ header {
 .benefit-icon {
     width: 43.67px;
     height: 35.35px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* REVERTED: Distance between image and heading to 10px */
 }
 
 .benefit-title {
     font-size: 18px;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 5px;
+    /* This element's margin-bottom was previously 5px, so we need to ensure the total gap is 13px */
+    margin-bottom: 5px; /* REVERTED: Retaining previous margin-bottom */
     width: 256px;
     height: 26px;
     overflow: hidden;
@@ -531,7 +532,7 @@ header {
     height: 52px;
     overflow: hidden;
     line-height: 1.4;
-    margin-top: 10px;
+    margin-top: 8px; /* REVERTED: Distance between heading and text below it. 5px (from title) + 8px = 13px total. */
     text-align: center;
 }
 

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headphones - Homepage</title>
+    <link rel="stylesheet" href="0-styles.css" />
+    <!-- Adding Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <!-- Logo -->
+        <img
+          src="./images/logo_headphones.png"
+          alt="Headphones Logo"
+          class="nav-logo"
+          onerror="this.onerror=null; this.src='https://placehold.co/169x30/000000/FFFFFF?text=Logo+Missing';"
+        />
+
+        <!-- Navigation Links and Hamburger Menu Elements -->
+        <!-- The checkbox is present for accessibility and as a toggle target for JS -->
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-label="Toggle navigation menu"
+        />
+        <!-- The label acts as the clickable hamburger icon -->
+        <label for="menu-toggle" class="menu-icon"
+          ><i class="fas fa-bars"></i
+        ></label>
+
+        <ul class="nav-links">
+          <li><a href="#what-we-do">what we do</a></li>
+          <li><a href="#our-results">our results</a></li>
+          <li><a href="#contact-us">contact us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hero Section Content -->
+      <div class="hero-content-wrapper">
+        <h1 class="hero-title">Lorem ipsum dolor set amet lorem ipsum</h1>
+        <h2 class="sub hero-title">
+          Lorem ipsum dolor set amet lorem ipsum dolor set
+        </h2>
+
+        <button class="call-to-action-btn">CALL TO ACTION</button>
+        <p class="hero-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <!-- "What we do" section -->
+      <section id="what-we-do" class="what-we-do-section">
+        <div class="container">
+          <h2 class="section-title">What we do...</h2>
+          <p class="section-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </p>
+          <div class="features-grid">
+            <div class="feature-item">
+              <img
+                src="./images/sound-frecuency.svg"
+                alt="Sound Frequency icon"
+                class="feature-icon"
+                onerror="this.onerror=null; this.src='https://placehold.co/67x76?text=SVG+Icon';"
+              />
+              <h3>Lorem ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="feature-item">
+              <img
+                src="./images/video.svg"
+                alt="Video icon"
+                class="feature-icon"
+                onerror="this.onerror=null; this.src='https://placehold.co/67x76?text=SVG+Icon';"
+              />
+              <h3>Lorem ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="feature-item">
+              <img
+                src="./images/music.svg"
+                alt="Music icon"
+                class="feature-icon"
+                onerror="this.onerror=null; this.src='https://placehold.co/67x76?text=SVG+Icon';"
+              />
+              <h3>Lorem ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="feature-item">
+              <img
+                src="./images/hearing.svg"
+                alt="Hearing icon"
+                class="feature-icon"
+                onerror="this.onerror=null; this.src='https://placehold.co/67x76?text=SVG+Icon';"
+              />
+              <h3>Lorem ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- "Our results" section -->
+      <section id="our-results" class="our-results-section">
+        <div class="container">
+          <h2 class="section-title white-text">
+            Our results speak for themselves
+          </h2>
+          <p class="section-description white-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </p>
+          <div class="results-grid">
+            <div class="result-item">
+              <!-- Pentagon will be drawn by CSS clip-path -->
+              <h3>2%</h3>
+              <p>Lorem ipsum dolor</p>
+            </div>
+            <div class="result-item">
+              <!-- Pentagon will be drawn by CSS clip-path -->
+              <h3>2%</h3>
+              <p>Lorem ipsum dolor</p>
+            </div>
+            <div class="result-item">
+              <!-- Pentagon will be drawn by CSS clip-path -->
+              <h3>2%</h3>
+              <p>Lorem ipsum dolor</p>
+            </div>
+            <div class="result-item">
+              <!-- Pentagon will be drawn by CSS clip-path -->
+              <h3>2%</h3>
+              <p>Lorem ipsum dolor</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact us section -->
+      <section id="contact-us" class="contact-us-section">
+        <h2 class="section-title">Contact us</h2>
+        <div class="contact-form-container">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="call-to-action-btn">
+              CALL TO ACTION
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content-wrapper">
+        <img
+          src="./images/logo_headphones.png"
+          alt="Headphones Logo"
+          class="footer-logo"
+          onerror="this.onerror=null; this.src='https://placehold.co/169x30/000000/FFFFFF?text=Logo';"
+        />
+        <div class="social-icons-wrapper">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p class="copyright-text">©headphones 2020</p>
+    </footer>
+
+    <!-- Link to your JavaScript file for hamburger menu functionality -->
+    <script src="./script.js"></script>
+  </body>
+</html>

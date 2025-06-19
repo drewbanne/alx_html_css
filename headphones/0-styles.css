@@ -1,0 +1,564 @@
+/* Universal box-sizing for consistent layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Body Styling */
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+/* Global Container for Max Width and Centering */
+/* This class will be applied to inner divs within sections to constrain content */
+.container {
+    max-width: 1002px; /* Set to 1002px as per specific request */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add horizontal padding for smaller screens */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Header Section */
+header {
+  position: relative;
+  width: 100%;
+  height: 800px; /* Desktop height as per design */
+  background-image: url('images/headphones_hero_1.jpg'); /* Background image for the hero section */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex; /* Use flex to align children (nav and content) vertically */
+  flex-direction: column;
+}
+
+/* Main Navigation Bar (positioned precisely within the header) */
+.main-nav {
+    position: absolute;
+    top: 35.02px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1103.41px; /* Correct width according to Figma for consistency, previously 1000px */
+    height: 29.46px; /* H from design */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    padding: 0 20px; /* Padding inside the nav */
+    box-sizing: border-box;
+}
+
+/* Styles for the Smileschool logo image within the navigation */
+.nav-logo {
+    height: 29.46px; /* Match height of nav bar as per design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the navigation links list */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 53px; /* Spacing between links as per design */
+}
+
+/* Styles for individual navigation links */
+.nav-links li a {
+    color: #fff; /* White text */
+    font-weight: bold; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Text size 16px */
+    white-space: nowrap; /* Prevent links from wrapping to new lines */
+    transition: opacity 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+    color: #FF6565; /* Hover/active color */
+    opacity: 0.9;
+}
+
+/* Mobile Menu Icon (Hamburger) - Hidden by default on desktop */
+.menu-toggle {
+    display: none; /* Hidden by default */
+}
+
+.menu-icon {
+    display: none; /* Hidden by default, shown only on mobile */
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 101; /* Ensure icon is clickable above everything */
+}
+
+/* Hero Section Content Wrapper */
+.hero-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    color: #fff;
+    flex-grow: 1; /* Allows it to take available space in the header */
+    padding-top: 100px; /* Adjust padding to make space for nav */
+    padding-bottom: 50px; /* Ensure content is not too close to bottom of header */
+    max-width: 1000px; /* Constrain content width */
+    width: 100%; /* Take full width of parent */
+    margin: 0 auto; /* Center itself within the header */
+}
+
+/* Hero Primary Title (H1) */
+.hero-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+    max-width: 684px; /* Constrain width for better readability */
+    color: #fff;
+}
+
+/* Sub Hero Title (H2) */
+.sub.hero-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    max-width: 700px; /* Constrain width */
+    color: #fff;
+}
+
+/* Call to Action Button */
+.call-to-action-btn {
+    display: inline-block;
+    background-color: #FF6565; /* Reddish color for CTA */
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.call-to-action-btn:hover,
+.call-to-action-btn:active {
+    opacity: 0.9; /* Hover/active opacity */
+}
+
+/* Hero Description Paragraph */
+.hero-description {
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    max-width: 660px; /* Align with h1/h2 width */
+    line-height: 1.6;
+    margin-top: 30px; /* Increased space below button */
+    padding: 0 15px; /* Horizontal padding */
+}
+
+/* --- General Section Styles --- */
+section {
+    padding: 80px 0; /* Vertical padding for all sections */
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #000; /* Default title color for white backgrounds */
+}
+
+.purple-text {
+    color: #FF6565; /* Distinct purple color */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.white-text {
+    color: #fff; /* For sections with dark backgrounds */
+}
+
+.section-description {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 60px auto; /* Centered with space below */
+    padding: 0 20px;
+}
+
+/* --- "What we do" section --- */
+.what-we-do-section {
+    background-color: #fff;
+}
+
+/* Specific styling for the "What we do" section title */
+.what-we-do-section .section-title {
+    font-weight: 600; /* Changed to semibold (600) */
+    color: #071629; /* Specific color as requested */
+    font-size: 32px; /* Changed to 32px */
+}
+
+/* Specific styling for the "What we do" section description */
+.what-we-do-section .section-description {
+    color: #071629; /* Specific color as requested */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); /* Adjusted min-width for proper horizontal fit */
+    gap: 58px; /* Space between grid items as per new specification */
+    margin: 0 auto; /* Ensure the grid itself is centered within its parent container */
+    padding: 0; /* Padding handled by .container now */
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally within the feature-item */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Added for smooth hover animation */
+}
+
+.feature-item:hover {
+    transform: scale(1.05); /* Scales up slightly on hover */
+    opacity: 0.8; /* Reduces opacity slightly on hover */
+}
+
+.feature-icon {
+    width: 67.59px; /* Specific width for SVG icons as requested */
+    height: 76.8px; /* Specific height for SVG icons as requested */
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #071629; /* Text color changed to #071629 */
+    line-height: 1.3; /* Adjusted line height to help fit text in 2 lines */
+    height: 2.6em; /* Explicit height to help force 2 lines (2 * 1.3 line-height = 2.6em) */
+    overflow: hidden; /* Hide any overflow if text still doesn't fit */
+}
+
+/* --- "Our results" section --- */
+.our-results-section {
+    background-image: url('images/headphones_hero_2.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 650px; /* Height of the section */
+    color: #fff; /* Ensures text is white on this background */
+    display: flex; /* Use flex to stack content vertically */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 80px 0; /* Keep consistent section padding */
+    text-align: center;
+    overflow: hidden; /* Hide any overflow */
+}
+
+.our-results-section .section-title {
+    color: #fff; /* Ensure it's white */
+    margin-bottom: 40px; /* Distance between heading and description */
+    font-weight: 600; /* Semibold as requested */
+    font-size: 32px; /* Font size 32px as requested */
+}
+
+.our-results-section .section-description {
+    color: #fff; /* Ensure it's white */
+    margin: 0 auto 40px auto; /* Adjusted margin for 40px space below description before grid */
+    font-size: 16px; /* Regular 16px as requested */
+    font-weight: normal; /* Normal weight as requested */
+    max-width: 800px; /* Keep consistent */
+}
+
+.results-grid {
+    display: grid;
+    /* Forces 4 columns and ensures they stay on one line.
+       Individual item width will adapt to fit the container width minus the gaps. */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 76px; /* Space between pentagone shapes (76px as specified) */
+    max-width: 1002px; /* Max width to match container */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.result-item {
+    background-color: #FF6565; /* Background color for the pentagon shape */
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    width: 190px; /* Width of the pentagon shape */
+    height: 190px; /* Height of the pentagon shape */
+    display: flex; /* Use flexbox to center content inside */
+    flex-direction: column; /* Stack h3 and p vertically */
+    justify-content: center; /* Center vertically within the pentagon */
+    align-items: center; /* Center horizontally within the pentagon */
+    text-align: center; /* Ensure text is centered */
+    padding: 20px; /* Add padding inside the pentagon if needed for text spacing */
+    flex-shrink: 0; /* Prevent shrinking on smaller grids */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Added for smooth hover animation */
+}
+
+.result-item:hover {
+    transform: scale(1.05); /* Scales up slightly on hover */
+    opacity: 0.8; /* Reduces opacity slightly on hover */
+}
+
+.result-item h3 {
+    font-size: 46px; /* Larger font size for numbers/main text in pentagon */
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px; /* Adjust spacing as needed inside the pentagon */
+    line-height: 1; /* Tighter line height for the number */
+}
+
+.result-item p {
+    font-size: 14px; /* Text below 2% is font size 14 */
+    color: #fff;
+    margin: 0; /* Remove default margin to control spacing */
+}
+
+/* --- Contact Us section --- */
+.contact-us-section {
+    background-color: #fff; /* Keeping white background */
+    padding-bottom: 100px; /* More padding at bottom */
+    color: #071629; /* Font color for the entire area */
+}
+
+.contact-us-section .section-title {
+    font-weight: 600; /* Semibold (600) */
+    font-size: 32px; /* Font size 32px */
+    color: #071629; /* Ensure title also has this color explicitly */
+}
+
+.contact-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left; /* Keep form elements left-aligned within container */
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block; /* Make label appear on its own line */
+    font-size: 16px;
+    font-weight: bold;
+    color: #071629; /* Label text color to #071629 */
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+/* Adjust the CTA button in the form */
+.contact-form .call-to-action-btn {
+    display: block; /* Make it a block element to allow margin auto centering */
+    width: auto; /* Allow button to shrink to its content */
+    min-width: 200px; /* Ensure a decent size */
+    margin: 20px auto 0 auto; /* Center the button horizontally */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #071629; /* Footer background color */
+    color: #fff; /* White text color */
+    padding: 40px 20px; /* Vertical and horizontal padding */
+    text-align: center;
+}
+
+.footer-content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto 30px auto; /* Space above copyright */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-logo {
+    height: 30px;
+    width: auto;
+    flex-shrink: 0;
+    margin-right: 20px; /* Space from social icons on desktop */
+}
+
+.social-icons-wrapper {
+    display: flex;
+    gap: 20px; /* Spacing between icons */
+}
+
+.social-icon {
+    background-color: #fff; /* White background for the icon */
+    width: 30px; /* Width for the round background */
+    height: 30px; /* Height for the round background */
+    border-radius: 50%; /* Make it round */
+    display: flex; /* Use flexbox to center the actual icon */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: #071629; /* Icon color for visibility on white background */
+    font-size: 16px; /* Adjust font size to fit within 30x30 circle nicely */
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #eee; /* Lighter background on hover */
+}
+
+.copyright-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.35); /* White with 35% opacity */
+    margin-top: 20px; /* Space from wrapper above */
+    width: 100%; /* Ensure it spans full width */
+}
+
+/* --- Responsive Design for Mobile (Max-width 480px) --- */
+@media (max-width: 480px) {
+    /* Header and Navigation */
+    header {
+        height: auto; /* Auto height for mobile header */
+        min-height: 500px; /* Ensure minimum height for hero content */
+        justify-content: flex-start; /* Align content to top for mobile layout */
+    }
+
+    .main-nav {
+        position: relative; /* Change to relative for normal flow */
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        padding: 20px; /* Add padding for mobile */
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .nav-links {
+        display: none; /* Hide navigation links by default on mobile */
+        /* New: Full-screen overlay for mobile menu */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        background-color: rgba(0, 0, 0, 0.9); /* Dark overlay for menu */
+        flex-direction: column; /* Stack links vertically */
+        justify-content: center; /* Center links vertically */
+        align-items: center; /* Center links horizontally */
+        z-index: 99; /* Below menu icon, but above other content */
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+
+    .nav-links.active {
+        transform: translateX(0); /* Slide in when active */
+        display: flex; /* Ensure it's flex when active */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Space between stacked links */
+    }
+
+    .nav-links li a {
+        font-size: 18px; /* Larger links for touch */
+        padding: 10px;
+        display: block; /* Make links fill space */
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    /* Hero Section */
+    .hero-content-wrapper {
+        padding-top: 80px; /* Adjust top padding */
+        padding-bottom: 80px;
+    }
+
+    .hero-title {
+        font-size: 50px; /* Smaller font size for mobile H1 */
+        margin-bottom: 10px;
+    }
+
+    .sub.hero-title {
+        font-size: 20px; /* Smaller font size for mobile H2 */
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 14px; /* Smaller description text for mobile */
+        margin-top: 20px;
+    }
+
+    .call-to-action-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    /* General Sections */
+    section {
+        padding: 40px 0; /* Reduced vertical padding */
+    }
+
+    .section-title {
+        font-size: 36px; /* Smaller section titles */
+        margin-bottom: 20px;
+    }
+
+    .section-description {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    /* Grids (What we do, Our results) */
+    /* On mobile, stack feature items vertically in one column */
+    .features-grid,
+    .results-grid {
+        grid-template-columns: 1fr; /* Single column layout on mobile */
+        gap: 40px; /* Adjusted gap */
+    }
+
+    /* Footer */
+    .footer-content-wrapper {
+        flex-direction: column; /* Stack logo and social icons vertically */
+        gap: 20px; /* Space between stacked items */
+    }
+
+    .footer-logo {
+        margin-right: 0;
+    }
+}
