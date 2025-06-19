@@ -1,4 +1,4 @@
-##🎧 Dynamic Headphones Website
+🎧 Dynamic Headphones Website
 This project is a capstone for the ALX Frontend Web Development curriculum, focusing on HTML and CSS.
 
 📄 Project Goal
@@ -41,17 +41,5 @@ script.js – JavaScript for interactive elements (e.g., hamburger menu)
 
 images/ – Directory containing all necessary image assets
 
-🚀 Getting Started
-Clone the repository:
-
-git clone https://github.com/drewbanne/alx_html_css.git
-cd alx_html_css
-
-Open index.html in your web browser.
-
 ✅ Author
 Andrews Inaam Banne – ALX SE Program
-
-GitHub Profile
-
-Behance Profile
